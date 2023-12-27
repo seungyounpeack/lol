@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+    <libraryInfo home="/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home" version="21.0.1"/>
+    <libraryInfo home="D:\TPS_IMP\java\jdk8u372-b07" version="1.8.0_372">
+        <bootpath>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\resources.jar"/>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\rt.jar"/>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\sunrsasign.jar"/>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\jsse.jar"/>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\jce.jar"/>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\charsets.jar"/>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\jfr.jar"/>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="D:\TPS_IMP\java\jdk8u372-b07\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
+    <libraryInfo home="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.9.v20231028-0858" version="17.0.9"/>
+    <libraryInfo home="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.9.v20231028-0858/jre" version="17.0.9"/>
+</libraryInfos>

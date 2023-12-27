@@ -1,0 +1,14 @@
+class garan{
+	
+};
+class b{};
+
+
+public class jing {
+	public static void name(String[] args) {
+		new a();
+		new b();
+		
+	}
+
+}
