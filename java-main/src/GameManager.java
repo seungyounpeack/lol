@@ -5,24 +5,22 @@ import java.util.*;
 public class GameManager {
     public static void main(String[] args) {
         ArrayList<Cham> champion = new ArrayList<>();
-        ArrayList<Cham> winner = new ArrayList<Cham>();
-
         //가렌이름
         for (int i = 1; i < 4; i++) {
             Garen garen1 = new Garen();
-            garen1.name = garen1.name+String.valueOf(i);
+            garen1.name = garen1.name+i;
             champion.add(garen1);
         }
         //징크스 이름
         for (int i = 1; i < 5; i++) {
             Jing jing1 = new Jing();
-            jing1.name = jing1.name+String.valueOf(i);
+            jing1.name = jing1.name+i;
             champion.add(jing1);
         }
         //솔 이름
         for (int i = 1; i < 6; i++) {
             Sol sol1 = new Sol();
-            sol1.name = sol1.name+String.valueOf(i);
+            sol1.name = sol1.name+i;
             champion.add(sol1);
         }
         System.out.println("ㅈ밥 대전을 시작하지.... ");
@@ -34,20 +32,21 @@ public class GameManager {
         }
     }
     private static ArrayList<Cham> getWinnerChampion(ArrayList<Cham> champion){
-        ArrayList<Cham> winner = new ArrayList<Cham>();
+        ArrayList<Cham> winner = new ArrayList<>();
         int round = 0;
         while (!champion.isEmpty()){
             round++;
             int zero = 0;
-            int half = (int)champion.size()/2;
-            int max = (int)champion.size();
+            int half = champion.size()/2;
+            int max = champion.size();
 
             Cham player1 = champion.get(zero);
             Cham player2 = champion.get(half);
-            Cham workOver = champion.get(max);
+            Cham workOver = champion.get(max-1);
 
             String player1Name = player1.name;
             String player2Name = player2.name;
+            String workOverName = workOver.name;
             String player1Ment = player1.getAttackMent();
             String player2Ment = player2.getAttackMent();
             int player1Py1 = player1.py;
@@ -57,8 +56,9 @@ public class GameManager {
 
             System.out.println(round + "라운드 대결은 "+player1Name+"과 "+player2Name+"입니다.");
 
-            if(champion.size()/2 ==1){
+            if(champion.size()%2 == 1){
                 winner.add(workOver);
+                System.out.println("부전승으로 "+workOverName+"가 올라갑니다.");
             }
             while(player1Py1 > 0 && player2Py2 > 0) {
                 int player1health = player1Py1 - (int)(Math.random() *player2Deal2);
@@ -88,6 +88,7 @@ public class GameManager {
 
             }
         }
-        return winner;
+        champion = winner;
+        return champion;
     }
 }
