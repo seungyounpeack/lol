@@ -35,27 +35,27 @@ public class GameManager {
     }
     private static ArrayList<Cham> getWinnerChampion(ArrayList<Cham> champion){
         ArrayList<Cham> winner = new ArrayList<Cham>();
-        int firstround = 0;
+        int round = 0;
         while (!champion.isEmpty()){
-            firstround++;
-            int i = 0;
-            int j = champion.size()/2;
-            int h = champion.size();
+            round++;
+            int zero = 0;
+            int half = (int)champion.size()/2;
+            int max = (int)champion.size();
 
-            Cham a = champion.get(i);
-            Cham s = champion.get(j);
-            Cham workOver = champion.get(j);
+            Cham player1 = champion.get(zero);
+            Cham player2 = champion.get(half);
+            Cham workOver = champion.get(max);
 
-            String player1Name = a.name;
-            String player2Name = s.name;
-            String player1Ment = a.getAttackMent();
-            String player2Ment = s.getAttackMent();
-            int player1Py1 = a.py;
-            int player2Py2 = s.py;
-            int player1Deal1 = a.deal;
-            int player2Deal2 = s.deal;
+            String player1Name = player1.name;
+            String player2Name = player2.name;
+            String player1Ment = player1.getAttackMent();
+            String player2Ment = player2.getAttackMent();
+            int player1Py1 = player1.py;
+            int player2Py2 = player2.py;
+            int player1Deal1 = player1.deal;
+            int player2Deal2 = player2.deal;
 
-            System.out.println(firstround + "라운드 대결은 "+player1Name+"과 "+player2Name+"입니다.");
+            System.out.println(round + "라운드 대결은 "+player1Name+"과 "+player2Name+"입니다.");
 
             if(champion.size()/2 ==1){
                 winner.add(workOver);
@@ -75,15 +75,15 @@ public class GameManager {
 //                System.out.println(player2Name+"의 체력"+player2health);
                 if(player1Py1<=0) {
                     System.out.println("$$$$$$$$$$$$$$$$$$"+player2Name+"의 승리$$$$$$$$$$$$$$$$$$$$");
-                    winner.add(a);
-                    champion.remove(a);
-                    champion.remove(s);
+                    winner.add(player2);
+                    champion.remove(player1);
+                    champion.remove(player2);
 
                 }else if(player2Py2<=0){
                     System.out.println("$$$$$$$$$$$$$$$$$$"+player1Name+"의 승리$$$$$$$$$$$$$$$$$$$$");
-                    winner.add(s);
-                    champion.remove(a);
-                    champion.remove(s);
+                    winner.add(player1);
+                    champion.remove(player2);
+                    champion.remove(player1);
                 }
 
             }
